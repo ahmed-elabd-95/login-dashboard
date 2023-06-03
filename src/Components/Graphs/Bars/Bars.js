@@ -58,7 +58,7 @@ export const Bars = (props) => {
       return series;
     }
 
-    chart.data = items.data.dataBars;
+    chart.data = items.data?.dataBars;
 
     createSeries("first", "Metal Material");
     createSeries("second", "Plastic");

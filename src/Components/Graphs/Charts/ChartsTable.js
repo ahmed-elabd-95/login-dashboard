@@ -21,7 +21,7 @@ export const ChartsTable = (props) => {
     dispatch(getItems());
   }, []);
 
-  const rows = items.data.dataTableChart;
+  const rows = items.data?.dataTableChart;
 
   return (
     <TableContainer component={Paper}>

@@ -24,7 +24,7 @@ export const Chart = () => {
   useLayoutEffect(() => {
     var chart = am4core.create("chartsdiv", am4charts.PieChart);
     console.log("data111", items.data);
-    chart.data = items.data.dataCharts
+    chart.data = items.data?.dataCharts
 
     var pieSeries = chart.series.push(new am4charts.PieSeries());
     pieSeries.dataFields.value = "number";

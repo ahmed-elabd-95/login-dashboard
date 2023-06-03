@@ -403,5 +403,160 @@
       "day9": 32,
       "day10": 41
     }
+  ],
+  "dataTableTimline": [
+    {
+      "name": 1,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 2,
+      "day": "june",
+      "sale": 56
+      
+    },{
+      "name": 3,
+      "day": "june",
+      "sale": 25
+      
+    },{
+      "name": 4,
+      "day": "june",
+      "sale": 47
+      
+    },{
+      "name": 5,
+      "day": "june",
+      "sale": 56
+      
+    },{
+      "name": 6,
+      "day": "june",
+      "sale": 25
+      
+    },{
+      "name": 7,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 8,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 9,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 10,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 11,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 12,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 13,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 14,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 15,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 16,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 17,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 18,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 19,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 20,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 21,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 22,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 23,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 24,
+      "day": "june",
+      "sale": 60
+      
+    },{
+      "name": 25,
+      "day": "june",
+      "sale": 75
+      
+    },{
+      "name": 26,
+      "day": "june",
+      "sale": 15
+      
+    },{
+      "name": 27,
+      "day": "june",
+      "sale": 89
+      
+    },{
+      "name": 28,
+      "day": "june",
+      "sale": 78
+      
+    },{
+      "name": 29,
+      "day": "june",
+      "sale": 64
+      
+    },{
+      "name": 30,
+      "day": "june",
+      "sale": 26
+      
+    }
   ]
+
 }
+

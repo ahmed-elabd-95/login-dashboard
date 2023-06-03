@@ -5,6 +5,7 @@ import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
+am4core.useTheme(am4themes_animated);
 
 export const Timline = (props) => {
   // set up dispatch
@@ -26,11 +27,14 @@ export const Timline = (props) => {
     var chart = am4core.create("timelinediv", am4charts.XYChart);
 
     // Add data
-    console.log(items.data.dataTimline);
-    chart.data = items.data.dataTimline?.map((item, index) => {
-      return { ...item, valueNext: items.data.dataTimline[index + 1]?.value };
-    });
-    console.log("chart", chart.data);
+    // console.log("timeline", items.data.dataTimline);
+    // chart.data = items.data?.dataTimline?.map((item, index) => {
+    //   return { ...item, valueNext: items.data?.dataTimline[index + 1]?.value };
+    // });
+    chart.data = items.data?.dataTimline.map((item, index) =>{
+      return { ...item, valueNext: items.data?.dataTimline[index + 1]?.value };
+    })
+    console.log("chart", items.data?.dataTimline);
 
     // Create axes
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
@@ -110,7 +114,7 @@ export const Timline = (props) => {
       }
       return 0;
     }
-  }, [items]);
+  }, [items.data]);
 
   return (
     <div id="timelinediv" style={{ width: "100%", height: "500px" }}></div>
