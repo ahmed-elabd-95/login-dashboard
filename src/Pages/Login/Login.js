@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-
-import { useNavigate} from 'react-router-dom';
-
-
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
+
+// User Login info
+const database = [
+  {
+    username: "admin",
+    password: "admin",
+  },
+];
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -12,18 +17,9 @@ export const Login = () => {
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // User Login info
-  const database = [
-    {
-      username: "admin",
-      password: "admin"
-    },
-  
-  ];
-
   const errors = {
     uname: "invalid username",
-    pass: "invalid password"
+    pass: "invalid password",
   };
 
   const handleSubmit = (event) => {
@@ -80,8 +76,8 @@ export const Login = () => {
     <div className="app">
       <div className="login-form">
         <div className="title">Loggin</div>
-        {isSubmitted ?    navigate('/dashboard')        : renderForm}
+        {isSubmitted ? navigate("/dashboard") : renderForm}
       </div>
     </div>
   );
-}
+};

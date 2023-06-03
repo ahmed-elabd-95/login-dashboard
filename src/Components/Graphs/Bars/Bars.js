@@ -1,12 +1,23 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import * as am4core from "@amcharts/amcharts4/core";
-import * as am4plugins_timeline from "@amcharts/amcharts4/plugins/timeline";
-import * as am4plugins_bullets from "@amcharts/amcharts4/plugins/bullets";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+import { useSelector, useDispatch } from "react-redux";
+import { itemsSelector, getItems } from "../../../store/user/userSlice";
+import { data } from "../../../data/data";
 
 export const Bars = (props) => {
-  /* Chart code */
+  // set up dispatch
+  const dispatch = useDispatch();
+
+  // fetch data from our store
+  const { loading, error, items } = useSelector(itemsSelector);
+
+  // hook to fetch items
+  useEffect(() => {
+    dispatch(getItems());
+  }, []);
+
   // Themes begin
   am4core.useTheme(am4themes_animated);
   // Themes end
@@ -48,68 +59,7 @@ export const Bars = (props) => {
       return series;
     }
 
-    chart.data = [
-      {
-        category: "Day #1",
-        first: 40,
-        second: 55,
-        third: 60,
-      },
-      {
-        category: "Day #2",
-        first: 30,
-        second: 78,
-        third: 69,
-      },
-      {
-        category: "Day #3",
-        first: 27,
-        second: 40,
-        third: 45,
-      },
-      {
-        category: "Day #4",
-        first: 50,
-        second: 33,
-        third: 22,
-      },
-      {
-        category: "Day #5",
-        first: 60,
-        second: 73,
-        third: 42,
-      },
-      {
-        category: "Day #6",
-        first: 40,
-        second: 55,
-        third: 14,
-      },
-      {
-        category: "Day #7",
-        first: 50,
-        second: 33,
-        third: 22,
-      },
-      {
-        category: "Day #8",
-        first: 50,
-        second: 33,
-        third: 22,
-      },
-      {
-        category: "Day #9",
-        first: 40,
-        second: 34,
-        third: 32,
-      },
-      {
-        category: "Day #10",
-        first: 54,
-        second: 25,
-        third: 41,
-      },
-    ];
+    chart.data = items.dataBars;
 
     createSeries("first", "Metal Material");
     createSeries("second", "Plastic");
@@ -161,7 +111,7 @@ export const Bars = (props) => {
         }
       }
     }
-  }, []);
+  }, [items]);
 
   return <div id="barsdiv" style={{ width: "100%", height: "500px" }}></div>;
 };

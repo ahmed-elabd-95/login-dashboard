@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -6,19 +6,23 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-
-function createData(name, order, rate, reviewText) {
-  return { name,order, rate, reviewText };
-}
-
-const rows = [
-  createData("Positive", 501.9, 49.9,"Positive: 49.9%"),
-  createData("Negative", 301.9, 30, "Negative: 30.0%"),
-  createData("Neutral",  201.1, 20,"Neutral: 20.0%"),
-  
-];
+import { useSelector, useDispatch } from "react-redux";
+import { itemsSelector, getItems } from "../../../store/user/userSlice";
 
 export const ChartsTable = (props) => {
+  // set up dispatch
+  const dispatch = useDispatch();
+
+  // fetch data from our store
+  const { loading, error, items } = useSelector(itemsSelector);
+
+  // hook to fetch items
+  useEffect(() => {
+    dispatch(getItems());
+  }, []);
+
+  const rows = items.dataTableChart;
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -6,29 +6,23 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-
-function createData(
-  name,
-  day1,
-  day2,
-  day3,
-  day4,
-  day5,
-  day6,
-  day7,
-  day8,
-  day9,
-  day10
-) {
-  return { name, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10 };
-}
-const rows = [
-  createData("Metal", 40, 30, 27, 50, 60, 40, 50, 50, 40, 54),
-  createData("Plastic", 55, 78, 40, 33, 73, 55, 33, 33, 34, 25),
-  createData("Glass", 60, 69, 45, 22, 42, 14, 22, 22, 32, 41),
-];
+import { useSelector, useDispatch } from "react-redux";
+import { itemsSelector, getItems } from "../../../store/user/userSlice";
 
 export const BarsTable = (props) => {
+  // set up dispatch
+  const dispatch = useDispatch();
+
+  // fetch data from our store
+  const { loading, error, items } = useSelector(itemsSelector);
+
+  // hook to fetch items
+  useEffect(() => {
+    dispatch(getItems());
+  }, []);
+
+  const rows = items.dataTableBars;
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
