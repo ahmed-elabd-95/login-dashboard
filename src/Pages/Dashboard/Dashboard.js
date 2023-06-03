@@ -8,10 +8,12 @@ import { Bars } from "../../Components/Graphs/Bars/Bars";
 import { Relations } from "../../Components/Graphs/Relations";
 import { TimlineTable } from "../../Components/Graphs/Timline/TimlineTable";
 import { BarsTable } from "../../Components/Graphs/Bars/BarsTable";
+import "./Dashboard.css";
 
 export const Dashboard = (props) => {
   return (
     <>
+      <p className="chart-title">Pie Chart</p>
       <Taps>
         <TabPanel>
           <Chart />
@@ -20,6 +22,7 @@ export const Dashboard = (props) => {
           <ChartsTable />
         </TabPanel>
       </Taps>
+      <p className="chart-title">TimeLine Chart</p>
       <Taps>
         <TabPanel>
           <Timline />
@@ -28,6 +31,7 @@ export const Dashboard = (props) => {
           <TimlineTable />
         </TabPanel>
       </Taps>
+      <p className="chart-title">Bars Chart</p>
       <Taps>
         <TabPanel>
           <Bars />
@@ -35,6 +39,7 @@ export const Dashboard = (props) => {
         <TabPanel>
           <BarsTable />
         </TabPanel>
+        <p className="chart-title">Relations Chart</p>
       </Taps>
       <div>
         <Relations />

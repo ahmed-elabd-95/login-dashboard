@@ -23,7 +23,7 @@ export const Chart = () => {
   am4core.useTheme(am4themes_animated);
   useLayoutEffect(() => {
     var chart = am4core.create("chartsdiv", am4charts.PieChart);
-    console.log("data111", items.data.dataCharts);
+    console.log("data111", items.data);
     chart.data = items.data.dataCharts
 
     var pieSeries = chart.series.push(new am4charts.PieSeries());
