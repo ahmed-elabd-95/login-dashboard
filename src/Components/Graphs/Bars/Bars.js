@@ -4,7 +4,6 @@ import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import { useSelector, useDispatch } from "react-redux";
 import { itemsSelector, getItems } from "../../../store/user/userSlice";
-import { data } from "../../../data/data";
 
 export const Bars = (props) => {
   // set up dispatch
@@ -59,7 +58,7 @@ export const Bars = (props) => {
       return series;
     }
 
-    chart.data = items.dataBars;
+    chart.data = items.data.dataBars;
 
     createSeries("first", "Metal Material");
     createSeries("second", "Plastic");

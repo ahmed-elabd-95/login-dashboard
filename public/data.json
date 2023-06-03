@@ -5,14 +5,14 @@
       "number": 501.9
     },
     {
-      "review": "negative",
-      "number": 301.9
+      "review": "Neutral",
+      "number": 201.1
     },
     {
-      "review": "Neutral",
-     " number": 201.1
+      "review": "negative",
+      "number": 301.9
     }
-   ],
+  ],
   "dataTimline": [
     {
       "day": "1",
@@ -138,122 +138,211 @@
       "day": "30",
       "value": 26
     }
-  ],  
+  ],
   "dataBars": [
-      {
-        "category": "Day #1",
-        "first": 40,
-        "second": 55,
-        "third": 60
-      },
-      {
-        "category": "Day #2",
-        "first": 30,
-        "second": 78,
-        "third": 69
-      },
-      {
-        "category": "Day #3",
-        "first": 27,
-        "second": 40,
-        "third": 45
-      },
-      {
-        "category": "Day #4",
-        "first": 50,
-        "second": 33,
-        "third": 22
-      },
-      {
-        "category": "Day #5",
-        "first": 60,
-        "second": 73,
-        "third": 42
-      },
-      {
-        "category": "Day #6",
-        "first": 40,
-        "second": 55,
-        "third": 14
-      },
-      {
-        "category": "Day #7",
-        "first": 50,
-        "second": 33,
-        "third": 22
-      },
-      {
-        "category": "Day #8",
-        "first": 50,
-        "second": 33,
-        "third": 22
-      },
-      {
-        "category": "Day #9",
-        "first": 40,
-        "second": 34,
-        "third": 32
-      },
-      {
-        "category": "Day #10",
-        "first": 54,
-        "second": 25,
-        "third": 41
-      }
-    ],
-     "dataRelations": [
+    {
+      "category": "Day #1",
+      "first": 40,
+      "second": 55,
+      "third": 60
+    },
+    {
+      "category": "Day #2",
+      "first": 30,
+      "second": 78,
+      "third": 69
+    },
+    {
+      "category": "Day #3",
+      "first": 27,
+      "second": 40,
+      "third": 45
+    },
+    {
+      "category": "Day #4",
+      "first": 50,
+      "second": 33,
+      "third": 22
+    },
+    {
+      "category": "Day #5",
+      "first": 60,
+      "second": 73,
+      "third": 42
+    },
+    {
+      "category": "Day #6",
+      "first": 40,
+      "second": 55,
+      "third": 14
+    },
+    {
+      "category": "Day #7",
+      "first": 50,
+      "second": 33,
+      "third": 22
+    },
+    {
+      "category": "Day #8",
+      "first": 50,
+      "second": 33,
+      "third": 22
+    },
+    {
+      "category": "Day #9",
+      "first": 40,
+      "second": 34,
+      "third": 32
+    },
+    {
+      "category": "Day #10",
+      "first": 54,
+      "second": 25,
+      "third": 41
+    }
+  ],
+  "dataRelations": [
     {
       "name": "Distributer",
       "children": [
         {
           "name": "Seller 1",
           "children": [
-            { "name": "A1", "value": 100 },
-            { "name": "A2", "value": 80 },
-            { "name": "A3", "value": 60 },
-            { "name": "A4", "value": 70 },
-            { "name": "A5", "value": 50 },
-            { "name": "A6", "value": 40 },
-            { "name": "A7", "value": 30 },
-            { "name": "A8", "value": 20 },
-            { "name": "A9", "value": 10 },
-            { "name": "A10", "value": 60 }
+            {
+              "name": "A1",
+              "value": 100
+            },
+            {
+              "name": "A2",
+              "value": 80
+            },
+            {
+              "name": "A3",
+              "value": 60
+            },
+            {
+              "name": "A4",
+              "value": 70
+            },
+            {
+              "name": "A5",
+              "value": 50
+            },
+            {
+              "name": "A6",
+              "value": 40
+            },
+            {
+              "name": "A7",
+              "value": 30
+            },
+            {
+              "name": "A8",
+              "value": 20
+            },
+            {
+              "name": "A9",
+              "value": 10
+            },
+            {
+              "name": "A10",
+              "value": 60
+            }
           ]
         },
         {
           "name": "Seller 2",
           "children": [
-            { "name": "B1", "value": 135 },
-            { "name": "B2", "value": 165 },
-            { "name": "B3", "value": 115 },
-            { "name": "B4", "value": 178 },
-            { "name": "B5", "value": 187 },
-            { "name": "B6", "value": 152 },
-            { "name": "B7", "value": 139 },
-            { "name": "B8", "value": 120 },
-            { "name": "B9", "value": 35 },
-            { "name": "B10", "value": 98 }
+            {
+              "name": "B1",
+              "value": 135
+            },
+            {
+              "name": "B2",
+              "value": 165
+            },
+            {
+              "name": "B3",
+              "value": 115
+            },
+            {
+              "name": "B4",
+              "value": 178
+            },
+            {
+              "name": "B5",
+              "value": 187
+            },
+            {
+              "name": "B6",
+              "value": 152
+            },
+            {
+              "name": "B7",
+              "value": 139
+            },
+            {
+              "name": "B8",
+              "value": 120
+            },
+            {
+              "name": "B9",
+              "value": 35
+            },
+            {
+              "name": "B10",
+              "value": 98
+            }
           ]
         },
         {
           "name": "Seller 3",
           "children": [
-            { "name": "c1", "value": 50 },
-            { "name": "c2", "value": 135 },
-            { "name": "c3", "value": 195 },
-            { "name": "c4", "value": 250 },
-            { "name": "c5", "value": 260 },
-            { "name": "c6", "value": 270 },
-            { "name": "c7", "value": 280 },
-            { "name": "c8", "value": 135 },
-            { "name": "c9", "value": 120 },
-            { "name": "c10", "value": 100 }
+            {
+              "name": "c1",
+              "value": 50
+            },
+            {
+              "name": "c2",
+              "value": 135
+            },
+            {
+              "name": "c3",
+              "value": 195
+            },
+            {
+              "name": "c4",
+              "value": 250
+            },
+            {
+              "name": "c5",
+              "value": 260
+            },
+            {
+              "name": "c6",
+              "value": 270
+            },
+            {
+              "name": "c7",
+              "value": 280
+            },
+            {
+              "name": "c8",
+              "value": 135
+            },
+            {
+              "name": "c9",
+              "value": 120
+            },
+            {
+              "name": "c10",
+              "value": 100
+            }
           ]
         }
       ]
     }
   ],
-
   "dataTableChart": [
     {
       "name": "Positive",
@@ -274,8 +363,7 @@
       "reviewText": "Neutral: 20%"
     }
   ],
-  "dataTableBars" : [
-   
+  "dataTableBars": [
     {
       "name": "Metal",
       "day1": 40,
@@ -291,7 +379,7 @@
     },
     {
       "name": "Plastic",
-      "day1":  55,         
+      "day1": 55,
       "day2": 78,
       "day3": 33,
       "day4": 73,
@@ -316,6 +404,4 @@
       "day10": 41
     }
   ]
-  
-
 }

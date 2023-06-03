@@ -29,7 +29,7 @@ export const Relations = (props) => {
       new am4plugins_forceDirected.ForceDirectedSeries()
     );
 
-    chart.data = items.dataRelations;
+    chart.data = items.data.dataRelations;
 
     networkSeries.dataFields.value = "value";
     networkSeries.dataFields.name = "name";

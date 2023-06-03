@@ -4,7 +4,7 @@ import { itemsSelector, getItems } from "../../../store/user/userSlice";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
-import { data } from "../../../data/data";
+
 
 export const Timline = (props) => {
   // set up dispatch
@@ -26,9 +26,9 @@ export const Timline = (props) => {
     var chart = am4core.create("timelinediv", am4charts.XYChart);
 
     // Add data
-    console.log(data.dataTimline);
-    chart.data = items.dataTimline?.map((item, index) => {
-      return { ...item, valueNext: data.dataTimline[index + 1]?.value };
+    console.log(items.data.dataTimline);
+    chart.data = items.data.dataTimline?.map((item, index) => {
+      return { ...item, valueNext: items.data.dataTimline[index + 1]?.value };
     });
     console.log("chart", chart.data);
 
